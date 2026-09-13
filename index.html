@@ -1,14 +1,551 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Volunteer NGO Event Portal</title>
+
+    <!-- CSS will be connected later -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Welcome to Volunteer NGO Event Portal</h1>
-    <p>Connecting Volunteers with NGOs</p>
+    <!-- ================= HEADER ================= -->
 
+    <header>
+
+        <div class="logo">
+            <h2>VolunteerConnect</h2>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#volunteer">Volunteer</a>
+            <a href="#ngo">NGO</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="auth-buttons">
+            <a href="#login">Login</a>
+            <a href="#register">Register</a>
+        </div>
+
+    </header>
+
+
+    <!-- ================= HOME SECTION ================= -->
+
+    <section id="home">
+
+        <h1>Connect. Volunteer. Make a Difference.</h1>
+
+        <p>
+            A platform connecting volunteers, NGOs and communities
+            to create positive social change.
+        </p>
+
+        <a href="#volunteer">Become a Volunteer</a>
+
+        <a href="#events">Explore Events</a>
+
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section id="about">
+
+        <h2>About Our Portal</h2>
+
+        <p>
+            VolunteerConnect is a community volunteer management portal
+            designed to connect people who want to volunteer with NGOs
+            and community service opportunities.
+        </p>
+
+        <p>
+            Our platform makes it easier to discover volunteering
+            opportunities, register for events and participate in
+            meaningful social activities.
+        </p>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section id="how-it-works">
+
+        <h2>How It Works</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <h3>1. Register</h3>
+                <p>
+                    Create your volunteer or NGO account.
+                </p>
+            </div>
+
+            <div class="step">
+                <h3>2. Find Opportunities</h3>
+                <p>
+                    Explore volunteering events and community activities.
+                </p>
+            </div>
+
+            <div class="step">
+                <h3>3. Join an Event</h3>
+                <p>
+                    Enroll in an event that matches your interests.
+                </p>
+            </div>
+
+            <div class="step">
+                <h3>4. Make an Impact</h3>
+                <p>
+                    Participate and contribute to your community.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= VOLUNTEER SECTION ================= -->
+
+    <section id="volunteer">
+
+        <h2>Volunteer Registration</h2>
+
+        <p>
+            Join our volunteer community and help make a difference.
+        </p>
+
+        <form>
+
+            <label for="volunteer-name">Full Name:</label>
+            <input type="text" id="volunteer-name"
+                   name="volunteer-name"
+                   placeholder="Enter your name">
+
+            <br><br>
+
+            <label for="volunteer-email">Email:</label>
+            <input type="email" id="volunteer-email"
+                   name="volunteer-email"
+                   placeholder="Enter your email">
+
+            <br><br>
+
+            <label for="volunteer-mobile">Mobile Number:</label>
+            <input type="tel" id="volunteer-mobile"
+                   name="volunteer-mobile"
+                   placeholder="Enter mobile number">
+
+            <br><br>
+
+            <label for="volunteer-location">Location:</label>
+            <input type="text" id="volunteer-location"
+                   name="volunteer-location"
+                   placeholder="Enter your location">
+
+            <br><br>
+
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills"
+                   name="skills"
+                   placeholder="Example: Teaching, Event Management">
+
+            <br><br>
+
+            <label for="age-group">Age Group:</label>
+
+            <select id="age-group" name="age-group">
+
+                <option value="">Select Age Group</option>
+                <option value="below18">Below 18</option>
+                <option value="18-25">18 - 25</option>
+                <option value="26-40">26 - 40</option>
+                <option value="41-60">41 - 60</option>
+                <option value="above60">Above 60</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="interest">Area of Interest:</label>
+
+            <select id="interest" name="interest">
+
+                <option value="">Select Area</option>
+                <option value="education">Education</option>
+                <option value="elderly">Elderly Assistance</option>
+                <option value="environment">Environment</option>
+                <option value="cleanliness">Garbage Collection & Cleanliness</option>
+                <option value="health">Health & Blood Donation</option>
+                <option value="community">Community Service</option>
+                <option value="other">Other</option>
+
+            </select>
+
+            <br><br>
+
+            <button type="submit">
+                Register as Volunteer
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= NGO SECTION ================= -->
+
+    <section id="ngo">
+
+        <h2>NGO Registration</h2>
+
+        <p>
+            NGOs can register and create volunteering opportunities
+            for the community.
+        </p>
+
+        <form>
+
+            <label for="ngo-name">NGO Name:</label>
+            <input type="text" id="ngo-name"
+                   name="ngo-name"
+                   placeholder="Enter NGO name">
+
+            <br><br>
+
+            <label for="ngo-email">Email:</label>
+            <input type="email" id="ngo-email"
+                   name="ngo-email"
+                   placeholder="Enter NGO email">
+
+            <br><br>
+
+            <label for="ngo-mobile">Contact Number:</label>
+            <input type="tel" id="ngo-mobile"
+                   name="ngo-mobile"
+                   placeholder="Enter contact number">
+
+            <br><br>
+
+            <label for="ngo-location">Location:</label>
+            <input type="text" id="ngo-location"
+                   name="ngo-location"
+                   placeholder="Enter NGO location">
+
+            <br><br>
+
+            <label for="ngo-work">Area of Work:</label>
+
+            <select id="ngo-work" name="ngo-work">
+
+                <option value="">Select Area</option>
+                <option value="education">Education</option>
+                <option value="health">Health</option>
+                <option value="environment">Environment</option>
+                <option value="elderly">Elderly Care</option>
+                <option value="community">Community Development</option>
+                <option value="other">Other</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="ngo-description">
+                NGO Description:
+            </label>
+
+            <br>
+
+            <textarea id="ngo-description"
+                      name="ngo-description"
+                      rows="5"
+                      placeholder="Tell us about your NGO"></textarea>
+
+            <br><br>
+
+            <button type="submit">
+                Register NGO
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= EVENTS SECTION ================= -->
+
+    <section id="events">
+
+        <h2>Volunteer Events</h2>
+
+        <p>
+            Discover and join community service events.
+        </p>
+
+
+        <!-- Event 1 -->
+
+        <article class="event-card">
+
+            <h3>Community Cleanliness Drive</h3>
+
+            <p>
+                Help clean public areas and spread awareness
+                about cleanliness.
+            </p>
+
+            <p><strong>Date:</strong> To be announced</p>
+
+            <p><strong>Location:</strong> Local Community Area</p>
+
+            <p><strong>Volunteers Required:</strong> 20</p>
+
+            <button type="button">
+                Join Event
+            </button>
+
+        </article>
+
+
+        <!-- Event 2 -->
+
+        <article class="event-card">
+
+            <h3>Elderly Assistance Program</h3>
+
+            <p>
+                Spend time with elderly people and assist them
+                with their daily needs.
+            </p>
+
+            <p><strong>Date:</strong> To be announced</p>
+
+            <p><strong>Location:</strong> Community Centre</p>
+
+            <p><strong>Volunteers Required:</strong> 10</p>
+
+            <button type="button">
+                Join Event
+            </button>
+
+        </article>
+
+
+        <!-- Event 3 -->
+
+        <article class="event-card">
+
+            <h3>Education Support Program</h3>
+
+            <p>
+                Help students with basic education and
+                learning activities.
+            </p>
+
+            <p><strong>Date:</strong> To be announced</p>
+
+            <p><strong>Location:</strong> Community School</p>
+
+            <p><strong>Volunteers Required:</strong> 15</p>
+
+            <button type="button">
+                Join Event
+            </button>
+
+        </article>
+
+    </section>
+
+
+    <!-- ================= COMMUNITY SECTION ================= -->
+
+    <section id="community">
+
+        <h2>Community Volunteering</h2>
+
+        <p>
+            Everyone can contribute to the community.
+            Volunteering is not limited to students.
+        </p>
+
+        <div class="community-activities">
+
+            <div>
+                <h3>👴 Elderly Assistance</h3>
+                <p>
+                    Help elderly people with daily activities,
+                    companionship and essential support.
+                </p>
+            </div>
+
+            <div>
+                <h3>🧹 Cleanliness</h3>
+                <p>
+                    Participate in garbage collection and
+                    cleanliness drives.
+                </p>
+            </div>
+
+            <div>
+                <h3>📚 Education</h3>
+                <p>
+                    Support children and students through
+                    teaching and educational activities.
+                </p>
+            </div>
+
+            <div>
+                <h3>🌱 Environment</h3>
+                <p>
+                    Participate in tree plantation and
+                    environmental awareness activities.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CERTIFICATE SECTION ================= -->
+
+    <section id="certificate">
+
+        <h2>Volunteer Certificate</h2>
+
+        <p>
+            Volunteers who successfully complete an event
+            can receive a participation certificate.
+        </p>
+
+        <button type="button">
+            Check Certificate
+        </button>
+
+    </section>
+
+
+    <!-- ================= LOGIN SECTION ================= -->
+
+    <section id="login">
+
+        <h2>Login</h2>
+
+        <form>
+
+            <label for="login-email">Email:</label>
+
+            <input type="email"
+                   id="login-email"
+                   name="login-email"
+                   placeholder="Enter your email">
+
+            <br><br>
+
+            <label for="login-password">Password:</label>
+
+            <input type="password"
+                   id="login-password"
+                   name="login-password"
+                   placeholder="Enter your password">
+
+            <br><br>
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Have a question or want to collaborate with us?
+        </p>
+
+        <form>
+
+            <label for="contact-name">Name:</label>
+
+            <input type="text"
+                   id="contact-name"
+                   name="contact-name"
+                   placeholder="Enter your name">
+
+            <br><br>
+
+            <label for="contact-email">Email:</label>
+
+            <input type="email"
+                   id="contact-email"
+                   name="contact-email"
+                   placeholder="Enter your email">
+
+            <br><br>
+
+            <label for="message">Message:</label>
+
+            <br>
+
+            <textarea id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Enter your message"></textarea>
+
+            <br><br>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>VolunteerConnect</h3>
+
+        <p>
+            Connecting people. Supporting NGOs.
+            Building stronger communities.
+        </p>
+
+        <p>
+            © 2026 Volunteer NGO Event Portal.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript will be connected later -->
     <script src="script.js"></script>
+
 </body>
-</html>
+
+    </>
