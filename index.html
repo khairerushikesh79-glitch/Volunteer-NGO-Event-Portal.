@@ -1,115 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Volunteer NGO Event Portal</title>
+    <title>Volunteer Connect</title>
 
-    <!-- CSS will be connected later -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-
+    <!-- Navigation -->
     <header>
+        <nav class="navbar">
+            <div class="logo">Volunteer<span>Connect</span></div>
 
-        <div class="logo">
-            <h2>VolunteerConnect</h2>
-        </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#opportunities">Opportunities</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#volunteer">Volunteer</a>
-            <a href="#ngo">NGO</a>
-            <a href="#events">Events</a>
-            <a href="#contact">Contact</a>
+            <a href="#join" class="nav-btn">Join Us</a>
         </nav>
-
-        <div class="auth-buttons">
-            <a href="#login">Login</a>
-            <a href="#register">Register</a>
-        </div>
-
     </header>
 
 
-    <!-- ================= HOME SECTION ================= -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
 
-    <section id="home">
+        <div class="hero-content">
+            <p class="small-title">COMMUNITY • PEOPLE • IMPACT</p>
 
-        <h1>Connect. Volunteer. Make a Difference.</h1>
+            <h1>
+                Connect.<br>
+                Volunteer.<br>
+                <span>Make an Impact.</span>
+            </h1>
 
-        <p>
-            A platform connecting volunteers, NGOs and communities
-            to create positive social change.
-        </p>
+            <p class="hero-text">
+                Discover meaningful volunteering opportunities and
+                become a part of positive change in your community.
+            </p>
 
-        <a href="#volunteer">Become a Volunteer</a>
+            <div class="hero-buttons">
+                <a href="#opportunities" class="primary-btn">
+                    Find Opportunities
+                </a>
 
-        <a href="#events">Explore Events</a>
+                <a href="#join" class="secondary-btn">
+                    Become a Volunteer
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img 
+                src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=85"
+                alt="Community volunteers working together">
+        </div>
 
     </section>
 
 
-    <!-- ================= ABOUT SECTION ================= -->
+    <!-- Opportunities -->
+    <section id="opportunities" class="section">
 
-    <section id="about">
+        <div class="section-heading">
+            <p>GET INVOLVED</p>
+            <h2>Find a way to make a difference.</h2>
+        </div>
 
-        <h2>About Our Portal</h2>
+        <div class="cards">
+
+            <div class="card">
+                <img 
+                    src="https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?auto=format&fit=crop&w=800&q=85"
+                    alt="Community volunteering">
+
+                <div class="card-content">
+                    <h3>Community Support</h3>
+                    <p>
+                        Help local communities and support people
+                        who need a helping hand.
+                    </p>
+
+                    <a href="#">Explore →</a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img 
+                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=85"
+                    alt="Volunteers helping children">
+
+                <div class="card-content">
+                    <h3>Education & Children</h3>
+                    <p>
+                        Volunteer your time to support education
+                        and children's development.
+                    </p>
+
+                    <a href="#">Explore →</a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img 
+                    src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=800&q=85"
+                    alt="People helping community">
+
+                <div class="card-content">
+                    <h3>Environment</h3>
+                    <p>
+                        Take part in clean-up drives, awareness
+                        programs and environmental activities.
+                    </p>
+
+                    <a href="#">Explore →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <div>
+            <p class="small-title">OUR PURPOSE</p>
+
+            <h2>
+                Small actions can create
+                meaningful change.
+            </h2>
+        </div>
 
         <p>
-            VolunteerConnect is a community volunteer management portal
-            designed to connect people who want to volunteer with NGOs
-            and community service opportunities.
-        </p>
-
-        <p>
-            Our platform makes it easier to discover volunteering
-            opportunities, register for events and participate in
-            meaningful social activities.
+            VolunteerConnect connects volunteers with NGOs and
+            community initiatives. Find opportunities, participate
+            in events and contribute your skills and time to causes
+            that matter.
         </p>
 
     </section>
 
 
-    <!-- ================= HOW IT WORKS ================= -->
+    <!-- Join -->
+    <section id="join" class="join">
 
-    <section id="how-it-works">
+        <h2>Ready to make a difference?</h2>
 
-        <h2>How It Works</h2>
+        <p>
+            Join our volunteer community and start contributing today.
+        </p>
 
-        <div class="steps">
+        <a href="#" class="primary-btn">
+            Register as Volunteer
+        </a>
 
-            <div class="step">
-                <h3>1. Register</h3>
-                <p>
-                    Create your volunteer or NGO account.
-                </p>
-            </div>
+    </section>
 
-            <div class="step">
-                <h3>2. Find Opportunities</h3>
-                <p>
-                    Explore volunteering events and community activities.
-                </p>
-            </div>
 
-            <div class="step">
-                <h3>3. Join an Event</h3>
-                <p>
-                    Enroll in an event that matches your interests.
-                </p>
-            </div>
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="logo">Volunteer<span>Connect</span></div>
 
-            <div class="step">
-                <h3>4. Make an Impact</h3>
-                <p>
+        <p>
+            Connecting people with opportunities to create impact.
+        </p>
+
+        <p class="copyright">
+            © 2026 VolunteerConnect. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>                <p>
                     Participate and contribute to your community.
                 </p>
             </div>
