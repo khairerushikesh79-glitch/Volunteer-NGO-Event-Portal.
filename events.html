@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Volunteer Opportunities | Community Volunteer Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f8f4;
+            color: #1f2d25;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #285c3b;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #285c3b;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 70px 20px 45px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #666;
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        /* Categories */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 10px auto 40px;
+            padding: 0 20px;
+        }
+
+        .category-btn {
+            border: 1px solid #285c3b;
+            background: white;
+            color: #285c3b;
+            padding: 9px 17px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: #285c3b;
+            color: white;
+        }
+
+        /* Events */
+        .events-container {
+            width: 86%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding-bottom: 70px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            transition: 0.25s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .event-image {
+            height: 170px;
+            background: #dfe8df;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+        }
+
+        .event-content {
+            padding: 22px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #edf5ee;
+            color: #285c3b;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .event-content h2 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .event-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .event-info {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 17px;
+        }
+
+        .event-btn {
+            display: inline-block;
+            background: #285c3b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 17px;
+            border-radius: 7px;
+            font-size: 14px;
+        }
+
+        .event-btn:hover {
+            background: #1e472d;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2d25;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 900px) {
+            .events-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 50px 20px 35px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .events-container {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Volunteer Portal</div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="#">Login</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <h1>Find a Way to Volunteer</h1>
+
+        <p>
+            Explore meaningful volunteering opportunities and take part
+            in activities that make a positive difference in the community.
+        </p>
+
+    </section>
+
+
+    <!-- Categories -->
+    <div class="categories">
+
+        <button class="category-btn active" onclick="filterEvents('all')">
+            All
+        </button>
+
+        <button class="category-btn" onclick="filterEvents('environment')">
+            Environment
+        </button>
+
+        <button class="category-btn" onclick="filterEvents('elderly')">
+            Elderly Support
+        </button>
+
+        <button class="category-btn" onclick="filterEvents('education')">
+            Education
+        </button>
+
+        <button class="category-btn" onclick="filterEvents('cleanliness')">
+            Cleanliness
+        </button>
+
+    </div>
+
+
+    <!-- Events -->
+    <section class="events-container" id="eventsContainer">
+
+
+        <!-- Event 1 -->
+        <div class="event-card" data-category="environment">
+
+            <div class="event-image">
+                🌱
+            </div>
+
+            <div class="event-content">
+
+                <span class="tag">Environment</span>
+
+                <h2>Community Tree Plantation</h2>
+
+                <p>
+                    Join volunteers in planting trees and creating
+                    a greener and healthier community.
+                </p>
+
+                <div class="event-info">
+                    📅 05 October 2026<br>
+                    📍 Chhatrapati Sambhajinagar<br>
+                    👥 30 Volunteers
+                </div>
+
+                <a href="#" class="event-btn">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Event 2 -->
+        <div class="event-card" data-category="elderly">
+
+            <div class="event-image">
+                👵
+            </div>
+
+            <div class="event-content">
+
+                <span class="tag">Elderly Support</span>
+
+                <h2>Spend Time With Seniors</h2>
+
+                <p>
+                    Spend meaningful time with elderly people through
+                    conversations, activities and support.
+                </p>
+
+                <div class="event-info">
+                    📅 10 October 2026<br>
+                    📍 Community Care Centre<br>
+                    👥 15 Volunteers
+                </div>
+
+                <a href="#" class="event-btn">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Event 3 -->
+        <div class="event-card" data-category="education">
+
+            <div class="event-image">
+                📚
+            </div>
+
+            <div class="event-content">
+
+                <span class="tag">Education</span>
+
+                <h2>Education Support Program</h2>
+
+                <p>
+                    Help school students with basic learning,
+                    reading and educational activities.
+                </p>
+
+                <div class="event-info">
+                    📅 15 October 2026<br>
+                    📍 Local Community School<br>
+                    👥 20 Volunteers
+                </div>
+
+                <a href="#" class="event-btn">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Event 4 -->
+        <div class="event-card" data-category="cleanliness">
+
+            <div class="event-image">
+                🧹
+            </div>
+
+            <div class="event-content">
+
+                <span class="tag">Cleanliness</span>
+
+                <h2>Community Clean-Up Drive</h2>
+
+                <p>
+                    Work together with volunteers to clean public
+                    spaces and improve the local environment.
+                </p>
+
+                <div class="event-info">
+                    📅 18 October 2026<br>
+                    📍 Local Community Area<br>
+                    👥 40 Volunteers
+                </div>
+
+                <a href="#" class="event-btn">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Event 5 -->
+        <div class="event-card" data-category="environment">
+
+            <div class="event-image">
+                🌿
+            </div>
+
+            <div class="event-content">
+
+                <span class="tag">Environment</span>
+
+                <h2>Clean & Green Initiative</h2>
+
+                <p>
+                    Participate in a community initiative focused
+                    on cleanliness and environmental awareness.
+                </p>
+
+                <div class="event-info">
+                    📅 22 October 2026<br>
+                    📍 City Community Park<br>
+                    👥 25 Volunteers
+                </div>
+
+                <a href="#" class="event-btn">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Event 6 -->
+        <div class="event-card" data-category="education">
+
+            <div class="event-image">
+                🎓
+            </div>
+
+            <div class="event-content">
+
+                <span class="tag">Education</span>
+
+                <h2>Digital Literacy Workshop</h2>
+
+                <p>
+                    Help community members learn basic digital
+                    skills and safe internet usage.
+                </p>
+
+                <div class="event-info">
+                    📅 25 October 2026<br>
+                    📍 Community Learning Centre<br>
+                    👥 20 Volunteers
+                </div>
+
+                <a href="#" class="event-btn">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Community Volunteer Management Portal
+    </footer>
+
+
+    <script>
+
+        function filterEvents(category) {
+
+            const cards = document.querySelectorAll(".event-card");
+            const buttons = document.querySelectorAll(".category-btn");
+
+            buttons.forEach(button => {
+                button.classList.remove("active");
+            });
+
+            event.target.classList.add("active");
+
+
+            cards.forEach(card => {
+
+                if (category === "all") {
+
+                    card.style.display = "block";
+
+                } else if (card.dataset.category === category) {
+
+                    card.style.display = "block";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+  </html>
